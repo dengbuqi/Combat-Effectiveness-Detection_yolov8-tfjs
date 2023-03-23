@@ -1,3 +1,97 @@
+
+Search or jump to…
+Pull requests
+Issues
+Codespaces
+Marketplace
+Explore
+ 
+@dengbuqi 
+sitek94
+/
+vite-deploy-demo
+Public
+Fork your own copy of sitek94/vite-deploy-demo
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+sitek94/vite-deploy-demo
+ 2 branches
+ 0 tags
+Latest commit
+@sitek94
+sitek94 update actions in deploy workflow
+…
+d514cd2
+last month
+Git stats
+ 7 commits
+Files
+Type
+Name
+Latest commit message
+Commit time
+.github/workflows
+update actions in deploy workflow
+last month
+src
+init vite project
+10 months ago
+.gitignore
+init vite project
+10 months ago
+README.md
+fix link
+10 months ago
+index.html
+init vite project
+10 months ago
+package-lock.json
+init vite project
+10 months ago
+package.json
+init vite project
+10 months ago
+vite.config.js
+update base path to fix incorrect assets links
+10 months ago
+README.md
+Deploy Vite app to GitHub Pages using GitHub Actions
+Video tutorial
+Screen Shot 2022-05-15 at 18 03 44
+
+Step-by-step instructions
+Scaffold a new Vite app and init git
+# Create new Vite project using React template
+npm create vite@latest vite-project -- --template react
+
+# Install dependencies and start development server
+cd vite-project
+npm install
+npm run dev
+If the project is working fine, let's init a new git repository.
+
+git init
+git add .
+git commit -m "init vite project"
+https://vitejs.dev/guide/#scaffolding-your-first-vite-project
+Create a new GitHub repository
+Go to https://github.com/new and create a new repository.
+
+❗️ Make sure Public is selected if you don't have a premium account. Otherwise, you won't be able to host your app using GitHub pages. Screen Shot 2022-05-15 at 16 19 34
+
+Once the repo is created, copy and paste the instructions similar to these to your terminal
+
+git remote add origin git@github.com:sitek94/vite-deploy-demo.git
+git branch -M main
+git push -u origin main
+Create deployment workflow
+Create a new file: .github/workflows/deploy.yml and paste the following code:
+
 name: Deploy
 
 on:
@@ -17,7 +111,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 18
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
