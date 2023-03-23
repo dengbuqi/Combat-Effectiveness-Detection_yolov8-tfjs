@@ -1,7 +1,7 @@
 # Combat Effectiveness Detection using YOLOv8 and Tensorflow.js
 
 <p align="center">
-  <img src="./sample.png" />
+  <img src="./sample.jpg" />
 </p>
 
 ![love](https://img.shields.io/badge/Made%20with-🖤-white)
