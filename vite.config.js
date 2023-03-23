@@ -7,5 +7,5 @@ export default defineConfig({
   build: {
     chunkSizeWarningLimit: 2000, // handle warning on vendor.js bundle size
   },
-  base: "", ///Combat-Effectiveness-Detection_yolov8-tfjs/
+  base: "/Combat-Effectiveness-Detection_yolov8-tfjs/", ///Combat-Effectiveness-Detection_yolov8-tfjs/
 });
