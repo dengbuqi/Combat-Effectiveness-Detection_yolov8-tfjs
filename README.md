@@ -1,4 +1,4 @@
-# Object Detection using YOLOv8 and Tensorflow.js
+# Combat Effectiveness Detection using YOLOv8 and Tensorflow.js
 
 <p align="center">
   <img src="./sample.png" />
@@ -9,14 +9,14 @@
 
 ---
 
-Object Detection application right in your browser. Serving YOLOv8 in browser using tensorflow.js
+Combat Effectveness Detection application right in your browser. Serving YOLOv8 in browser using tensorflow.js
 with `webgl` backend.
 
 **Setup**
 
 ```bash
-git clone https://github.com/Hyuto/yolov8-tfjs.git
-cd yolov8-tfjs
+git clone https://github.com/dengbuqi/Combat-Effectiveness-Detection_yolov8-tfjs
+cd Combat-Effectiveness-Detection_yolov8-tfjs
 yarn install #Install dependencies
 ```
 
@@ -66,3 +66,4 @@ Use another YOLOv8 model.
 
 - https://github.com/ultralytics/ultralytics
 - https://github.com/Hyuto/yolov8-onnxruntime-web
+- https://github.com/Hyuto/yolov8-tfjs
