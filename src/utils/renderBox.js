@@ -1,4 +1,5 @@
 import labels from "./labels.json";
+import ce from "./ce.json";
 
 /**
  * Render prediction boxes
@@ -25,6 +26,7 @@ export const renderBoxes = (canvasRef, boxes_data, scores_data, classes_data, ra
   for (let i = 0; i < scores_data.length; ++i) {
     // filter based on class threshold
     const klass = labels[classes_data[i]];
+    const cescore = ce[klass]
     const color = colors.get(classes_data[i]);
     const score = (scores_data[i] * 100).toFixed(1);
 
@@ -47,7 +49,7 @@ export const renderBoxes = (canvasRef, boxes_data, scores_data, classes_data, ra
 
     // Draw the label background.
     ctx.fillStyle = color;
-    const textWidth = ctx.measureText(klass + " - " + score + "%").width;
+    const textWidth = ctx.measureText("💪CE:" + cescore + " " + klass + " : " + score + "%").width;
     const textHeight = parseInt(font, 10); // base 10
     const yText = y1 - (textHeight + ctx.lineWidth);
     ctx.fillRect(
@@ -59,7 +61,7 @@ export const renderBoxes = (canvasRef, boxes_data, scores_data, classes_data, ra
 
     // Draw labels
     ctx.fillStyle = "#ffffff";
-    ctx.fillText(klass + " - " + score + "%", x1 - 1, yText < 0 ? 0 : yText);
+    ctx.fillText("💪CE:" + cescore + " " + klass + " : " + score + "%", x1 - 1, yText < 0 ? 0 : yText);
   }
 };
 
